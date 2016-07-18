@@ -1,0 +1,88 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="britannia.css" />
+    <title> Britannia Building N1 </title>
+</head>
+
+  <body>
+
+    <h2>Britannia Building N1
+    </h2>
+    <hr>
+
+      <div id = "navBar">
+        <div id = "menu">
+          <ul>
+            <li><a href = "britanniabuilding.html" rel = "home">Home</a></li>
+            <li><a href = "updates.html" rel = "updates">Updates</a></li>
+            <li><a href = "bulletinBoard.html" rel = "bulletinBoard">Bulletin Board</a></li>
+            <li><a href = "contacts.html" rel = "contact">Contact</a></li>
+          </ul>
+
+    <div id="homepage">
+</br>
+
+<h3>
+        <p>Updates on planned projects</p>
+          <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</h3>
+
+
+    <select id='projects' name='projects' onchange="listTeam(this)">
+        <option value='0'>Terrace</option>
+        <option value='1'>Repair works to corridor 3rd Floor</option>
+        <option value='2'>TV replacement Cinema Room</option>
+        <option value='3'>Gym TV replacement</option>
+        <option value='4'>General communal area refresh</option>
+    </select>
+    <select id='works' name='works' multiple="multiple" size="2" style="width: 500px; height: 100px" ></select>
+
+    <script type="text/javascript">
+
+        var teams = [
+                "Worked commenced in April, and complete in June. xxxxxx",
+                "Due to flooding, carpeting in the third floor corridor has had to be replaced. xxx",
+                "TV has been ordered and is due to be delivered on xxxxxxx",
+                "TVs have been installed and are working. xxxxxxx",
+                "Residents have been surveyed on key areas to prioritise and responses being collated. xxxxxxx"
+            ],
+            listTeam = function listTeam(sel) {
+                var val = document.getElementById('projects').value,
+                    team = teams[val],
+                    opt = document.createElement('option'),
+                    lb = document.getElementById('works'),
+                    children = lb.children.length,
+                    child = null,
+                    i = 0;
+                opt.innerText = team;
+                for (i = 0; i < children; i += 1) {
+
+                    child = lb.children[0];
+                    lb.removeChild(child);
+                }
+                lb.appendChild(opt);
+            };
+        listTeam();
+    </script>
+
+
+        <h3> Feedback
+        </h3>
+          <p> Terrace Refurbishment
+          <form>
+            Name:<br>
+            <input type="text" name="name"><br>
+            <input type="radio" name="Evaluation" value="Amazing!" checked> Amazing!<br>
+            <input type="radio" name="Evaluation" value="Rubbish.."> Rubbish..<br>
+            Additional Comments:<br>
+            <input type="text" name="comment"><br>
+
+          </form>
+
+
+
+
+</body>
+</html>

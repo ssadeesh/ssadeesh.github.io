@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <script  src="britannia.js"></script>
+  <link rel="stylesheet" href="britannia.css" />
+    <title> Britannia Building N1 </title>
+</head>
+
+  <body>
+
+    <h2>Britannia Building N1
+    </h2>
+    <hr>
+
+      <div id = "navBar">
+        <div id = "menu">
+          <ul>
+            <li><a href = "britanniabuilding.html" rel = "home">Home</a></li>
+            <li><a href = "updates.html" rel = "updates">Updates</a></li>
+            <li><a href = "bulletinBoard.html" rel = "bulletinBoard">Bulletin Board</a></li>
+            <li><a href = "contacts.html" rel = "contact">Contact</a></li>
+          </ul>
+
+    <div id="homepage">
+
+    </br>
+
+    <h3> Events
+    </h3>
+      <p> The next committee meeting is proposed to occur in the third week of June. <br/>
+        Please indicate your availability using the Doodle link below <br/>
+        <a href="http:/doodle.com/">Doodle June committee update </a>
+      </p>
+</br>
+<h2>
+  <p> Minutes for previous meetings <p>
+</h2>
+
+
+        <select id='meetingDates' name='meetingDates' onchange="listTeam(this)">
+            <option value='0'>Q116</option>
+            <option value='1'>Q415</option>
+            <option value='2'>Q315</option>
+            <option value='3'>Q215</option>
+            <option value='4'>Q115</option>
+        </select>
+        <select id='mins' name='mins' multiple="multiple" size="1" style="width: 300px;" ></select>
+        <script type="text/javascript">
+            //put script block at end of body to ensure all other elements have already
+            //been loaded into the DOM (and therefore exist when we need them to.
+            //
+            //"new Array" is not helpful here, so use literal notation instead.
+            var minutesSummary = [
+                    "Q116 summary xxxxx",
+                    "Q415 summary xx",
+                    "Q315 summary xx",
+                    "Q215 summary xx ",
+                    "Q115 summary xxxxxx"
+                ],
+                listTeam = function listTeam(sel) {
+                    var selectedDate = document.getElementById('meetingDates').value, //get the selected value
+                        selectedMinutes = minutesSummary[selectedDate],  //get the selected team, based on value
+                        opt = document.createElement('option'), //create an <option> element
+                        ms = document.getElementById('mins'), //get the leaderBoard select element
+                        children = ms.children.length, //store the number of <option> child elements
+                        child = null, //declare a variable to store an <option> child element
+                        i = 0; //incrementor
+                    opt.innerText = selectedMinutes; //set the innerText
+                    for (i = 0; i < children; i += 1) {
+                        //loop through every child element of leaderBoard
+                        child = ms.children[0]; //store reference to element
+                        ms.removeChild(child); //remove from leaderBoard
+                    }
+                    ms.appendChild(opt); //add new <option> element
+                };
+            listTeam(); //call function on initial load as the leaderBoard select element has a selected child
+        </script>
+
+</body>
+</html>

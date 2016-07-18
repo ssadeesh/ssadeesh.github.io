@@ -1,0 +1,65 @@
+
+body {
+  	background-color:		grey;
+	background-repeat:		repeat-y;
+	font-size:				medium;
+	behavior:				url(csshover.htc);
+  font-family:		Arial, sans-serif;
+	width:				920px;
+	margin-left:		auto;
+	margin-right:		auto;
+	color:				black;
+
+
+}
+
+#homepage h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1em;
+  font-weight: bold;
+
+}
+
+#homepage li{
+	margin-top:			35px;
+	margin-bottom:		35px;
+  padding: 20px;
+  font-size:			.75em;
+	font-weight:		normal;
+	line-height:		1.6;
+	list-style:			square;
+}
+
+#navBar {
+	background-color:	#6b645f;
+	height:				26px;
+	margin-top:			0px;
+	margin-bottom:		0px;
+}
+#navBar ul {
+	margin-left:		-40px;
+	margin-top:			0px;
+	margin-bottom:		0px;
+	list-style:			none;
+}
+#navBar li {
+	float:				left;
+}
+#navBar a {
+	display:			block;
+	padding:			6px 11px 6px 11px;
+	text-decoration:	none;
+	color:				#f8f7f7;
+	font-size:			.70em;
+	font-weight:		bold;
+	/*text-transform:		uppercase;*/
+
+}
+#navBar a:hover {
+	text-decoration:	underline;
+}
+#navBar a.active {
+	color:				#6b645f;
+	background-color:	#f8f7f7;
+}

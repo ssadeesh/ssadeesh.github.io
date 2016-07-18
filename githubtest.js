@@ -5,3 +5,10 @@ function main() {
 
 
 }
+
+var count = 0;
+function clickButton() {
+  count++;
+  clicker.innerText = count;
+
+}
